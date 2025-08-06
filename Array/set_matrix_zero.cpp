@@ -33,12 +33,14 @@ int main() {
     setZeroes(matrix);
 
     // Print updated matrix
-    for (const auto& row : matrix) {
-        for (int val : row) {
-            cout << val << " ";
-        }
-        cout << endl;
+   // Print updated matrix using normal for loop
+for (int i = 0; i < matrix.size(); i++) {
+    for (int j = 0; j < matrix[i].size(); j++) {
+        cout << matrix[i][j] << " ";
     }
+    cout << endl;
+}
+
 
     return 0;
 }
