@@ -6,13 +6,13 @@ class Solution {
 public:
     int majorityElement(vector<int>& nums) {
         int n = nums.size();
-        int maj = -1; // Initial placeholder
+        int maj = 0; 
         int count = 0;
 
         for (int i = 0; i < n; i++) {
             if (count == 0) {
-                maj = nums[i];
                 count = 1;
+                maj = nums[i];
             } else if (nums[i] == maj) {
                 count++;
             } else {
@@ -25,18 +25,15 @@ public:
 
 int main() {
     int n;
-    cout << "Enter size of array: ";
-    cin >> n;
+    cin >> n; // size of array
 
     vector<int> nums(n);
-    cout << "Enter elements: ";
     for (int i = 0; i < n; i++) {
         cin >> nums[i];
     }
 
-    Solution obj;
-    int result = obj.majorityElement(nums);
-    cout << "Majority element (> n/2 times): " << result << endl;
+    Solution s;
+    cout << s.majorityElement(nums) << endl;
 
     return 0;
 }
